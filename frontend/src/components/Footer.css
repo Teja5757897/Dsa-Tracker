@@ -1,0 +1,156 @@
+.mainFooter {
+  margin-top: 72px;
+  padding: 56px 24px 24px;
+  background: var(--bg-deep);
+  border-top: 1px solid var(--line);
+  color: var(--text);
+}
+
+.footerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- Hero ---------- */
+.footerHero {
+  max-width: 560px;
+}
+
+.mainFooter h2 {
+  font-size: clamp(26px, 3.4vw, 34px);
+  margin-bottom: 12px;
+}
+
+.mainFooter p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 6px 0;
+  max-width: 56ch;
+}
+
+.mainFooter strong {
+  color: var(--chalk);
+}
+
+.footerCta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  background: var(--marker);
+  color: var(--marker-ink);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.footerCta:hover {
+  background: #ffdb6b;
+}
+
+/* ---------- Link columns ---------- */
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.6fr;
+  gap: 32px;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.footerCol h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: var(--chalk);
+}
+
+.footerCol a {
+  display: block;
+  width: fit-content;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footerCol a:hover {
+  color: var(--marker);
+}
+
+.footerTip {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--marker);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.mainFooter .footerTip p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* ---------- Copyright ---------- */
+.mainFooter .copyright {
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  max-width: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Back to top ---------- */
+.backToTop {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--chalk);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.15s ease;
+}
+
+.backToTop--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.backToTop:hover {
+  border-color: var(--marker);
+  color: var(--marker);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .mainFooter {
+    padding: 40px 16px 20px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .footerTip {
+    grid-column: 1 / -1;
+  }
+
+  .backToTop {
+    right: 16px;
+    bottom: 16px;
+  }
+}

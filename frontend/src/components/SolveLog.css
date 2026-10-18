@@ -1,0 +1,72 @@
+.solvelog {
+  width: 100%;
+}
+
+.solvelog-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.solvelog-cell {
+  display: block;
+  width: 100%;
+  min-width: 12px;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  background: rgba(130, 175, 220, 0.12);
+}
+
+.solvelog-grid .solvelog-cell {
+  /* the one orchestrated moment on Home: the log fills in, oldest day first */
+  animation: logIn 0.45s ease both;
+  animation-delay: calc(var(--i) * 7ms);
+}
+
+@keyframes logIn {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.solvelog-cell.level-1 {
+  background: rgba(255, 207, 63, 0.4);
+}
+.solvelog-cell.level-2 {
+  background: rgba(255, 207, 63, 0.7);
+}
+.solvelog-cell.level-3 {
+  background: var(--marker);
+}
+.solvelog-cell.is-future {
+  visibility: hidden;
+}
+
+.solvelog-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.solvelog-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.solvelog-legend .solvelog-cell {
+  width: 12px;
+  min-width: 12px;
+}

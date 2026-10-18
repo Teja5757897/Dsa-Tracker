@@ -1,0 +1,76 @@
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.topic-skeleton {
+  height: 142px;
+}
+
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.topic-card:hover {
+  border-color: var(--marker);
+  transform: translateY(-2px);
+}
+
+.topic-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.topic-top h2 {
+  font-size: 20px;
+}
+
+.topic-count {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* one square per question: the topic's own little checklist */
+.topic-squares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.topic-squares i {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background: rgba(130, 175, 220, 0.14);
+  transition: background 0.2s ease;
+}
+
+.topic-squares i.on {
+  background: var(--marker);
+}
+
+.topic-foot {
+  margin-top: auto;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.topic-card.is-complete {
+  border-color: rgba(255, 207, 63, 0.5);
+}
+
+.topic-card.is-complete .topic-foot {
+  color: var(--marker);
+  font-weight: 600;
+}

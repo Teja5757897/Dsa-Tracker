@@ -1,0 +1,19 @@
+.notfound {
+  padding-top: 96px;
+  padding-bottom: 48px;
+}
+
+.notfound-code {
+  font-size: clamp(72px, 14vw, 140px);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--marker);
+  margin-bottom: 12px;
+}
+
+.notfound-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}

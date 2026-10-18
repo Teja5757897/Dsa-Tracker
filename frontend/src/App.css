@@ -1,0 +1,302 @@
+/* ---------- Layout ---------- */
+.app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 24px;
+}
+
+.page-head {
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-size: clamp(30px, 4.4vw, 46px);
+  line-height: 1.08;
+  margin-bottom: 10px;
+}
+
+.page-sub {
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  color: var(--chalk);
+}
+
+/* ---------- Surfaces ---------- */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--marker);
+  color: var(--marker-ink);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #ffdb6b;
+}
+
+.btn-line {
+  background: transparent;
+  color: var(--chalk);
+  border-color: var(--line);
+}
+
+.btn-line:hover:not(:disabled) {
+  border-color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--hard);
+  border-color: rgba(255, 118, 118, 0.4);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: rgba(255, 118, 118, 0.1);
+}
+
+/* ---------- Small pieces ---------- */
+.tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.tag-easy {
+  color: var(--easy);
+}
+.tag-medium {
+  color: var(--medium);
+}
+.tag-hard {
+  color: var(--hard);
+}
+
+.num {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.meter {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  background: var(--marker);
+  border-radius: inherit;
+  transition: width 0.5s ease;
+}
+
+/* ---------- Forms and filters ---------- */
+.field-input {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--chalk);
+  font: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.field-input::placeholder {
+  color: var(--muted);
+}
+
+.field-input:hover {
+  border-color: var(--muted);
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--marker);
+  box-shadow: 0 0 0 3px var(--marker-soft);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.toolbar .field-input {
+  flex: 1 1 240px;
+  max-width: 360px;
+}
+
+.seg {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.seg button {
+  padding: 9px 16px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.seg button:last-child {
+  border-right: none;
+}
+
+.seg button:hover {
+  color: var(--chalk);
+}
+
+.seg button.is-active {
+  background: var(--marker);
+  color: var(--marker-ink);
+  font-weight: 700;
+}
+
+/* ---------- Loading, empty, error ---------- */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.notice {
+  padding: 56px 24px;
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+}
+
+.notice h3 {
+  color: var(--chalk);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.notice .btn {
+  margin-top: 18px;
+}
+
+/* ---------- Progress ring ---------- */
+.ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.ring svg {
+  position: absolute;
+  inset: 0;
+}
+
+.ring-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.ring-center strong {
+  font-family: var(--mono);
+  font-size: 28px;
+  color: var(--chalk);
+}
+
+.ring-center small {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 32px 16px 16px;
+  }
+}

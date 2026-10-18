@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+/*
+  Design tokens. Idea: a blueprint on a whiteboard wall.
+  Ink-blue paper, faint grid, chalk text, and one marker-yellow accent for "done".
+*/
+:root {
+  --bg: #0b1a2c;
+  --bg-deep: #07111e;
+  --surface: #102338;
+  --surface-2: #15304b;
+  --line: #234463;
+  --line-soft: rgba(130, 175, 220, 0.07);
+
+  --chalk: #eef3f9;
+  --text: #a9bdd2;
+  --muted: #7790aa;
+
+  --marker: #ffcf3f;
+  --marker-ink: #251b00;
+  --marker-soft: rgba(255, 207, 63, 0.13);
+
+  --easy: #6fd8b0;
+  --medium: #ffa45c;
+  --hard: #ff7676;
+  --focus: #8fd0ff;
+
+  --radius: 8px;
+  --radius-sm: 5px;
+
+  --display: "Bricolage Grotesque", system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  font: 400 16px/1.6 var(--display);
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--display);
+  color: var(--chalk);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--marker);
+}
+
+::selection {
+  background: var(--marker);
+  color: var(--marker-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+button {
+  font-family: inherit;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--surface-2);
+  color: var(--chalk);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 10px;
+}

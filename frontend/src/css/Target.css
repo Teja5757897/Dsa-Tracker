@@ -1,0 +1,112 @@
+.target-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.target-today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.target-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 24px;
+}
+
+.target-counter {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.counter-value {
+  min-width: 2ch;
+  font-size: 84px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  color: var(--chalk);
+}
+
+.counter-btn {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--chalk);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.counter-btn:hover:not(:disabled) {
+  border-color: var(--marker);
+  color: var(--marker);
+}
+
+.counter-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.counter-label {
+  margin: 10px 0 28px;
+  color: var(--muted);
+}
+
+.preset-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.preset-btn {
+  min-width: 56px;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.preset-btn:hover {
+  border-color: var(--muted);
+  color: var(--chalk);
+}
+
+.preset-btn.active {
+  background: var(--marker);
+  border-color: var(--marker);
+  color: var(--marker-ink);
+  font-weight: 600;
+}
+
+.save-btn {
+  min-width: 200px;
+}
+
+@media (max-width: 760px) {
+  .target-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .counter-value {
+    font-size: 68px;
+  }
+}

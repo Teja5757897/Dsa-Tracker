@@ -1,0 +1,133 @@
+.q-head {
+  margin-bottom: 24px;
+}
+
+.q-progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.q-progress .meter {
+  flex: 1;
+}
+
+.q-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.q-skeleton {
+  height: 66px;
+}
+
+/* ---------- Question row ---------- */
+.q-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.q-row:hover {
+  background: var(--surface-2);
+  border-color: var(--muted);
+}
+
+.q-row.no-link {
+  cursor: default;
+}
+
+.q-row.is-solved {
+  border-left-color: var(--marker);
+}
+
+.q-row.is-solved h3 {
+  color: var(--muted);
+}
+
+.q-check {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--line);
+  border-radius: 5px;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.q-check:hover {
+  border-color: var(--marker);
+}
+
+.q-row.is-solved .q-check {
+  background: var(--marker);
+  border-color: var(--marker);
+  color: var(--marker-ink);
+}
+
+.q-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.q-body h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.q-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.q-save {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.q-save:hover {
+  color: var(--chalk);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.q-save.is-saved {
+  color: var(--marker);
+}
+
+@media (max-width: 520px) {
+  .q-row {
+    gap: 12px;
+    padding: 12px;
+  }
+}
