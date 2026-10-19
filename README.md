@@ -6,6 +6,15 @@
 
 A full-stack MERN app (MongoDB, Express, React, Node) for working through data structures and algorithms practice.
 
+[![Live demo](https://img.shields.io/badge/Live%20demo-dsa--solver--by--teja.netlify.app-1e4a7a?style=for-the-badge&logo=netlify&logoColor=white)](https://dsa-solver-by-teja.netlify.app)
+
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Node](https://img.shields.io/badge/Node.js-Express-339933?logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+> **Live:** https://dsa-solver-by-teja.netlify.app. The API runs on Render's free tier and sleeps when idle, so the first load after a quiet period can take up to a minute.
+
 [Features](#features) · [Screenshots](#screenshots-and-walkthrough) · [How it works](#how-it-works) · [Getting started](#getting-started) · [API](#api-reference) · [Deployment](#deployment)
 
 ![Home page with the solve log](docs/screenshots/home.png)
@@ -361,6 +370,16 @@ Authorization: Bearer <token>
 
 ## Deployment
 
+This project is deployed for free:
+
+| Part | Host | Address |
+| --- | --- | --- |
+| Frontend | Netlify | https://dsa-solver-by-teja.netlify.app |
+| API | Render | https://dsa-tracker-ed3r.onrender.com (`/api/health`) |
+| Database | MongoDB Atlas | free shared cluster |
+
+Every push to `main` redeploys the frontend and the API automatically.
+
 A common free setup:
 
 1. **Database:** create a MongoDB Atlas cluster and copy its connection string.
@@ -405,6 +424,14 @@ Issues and pull requests are welcome. For larger changes, please open an issue f
 
 - Question list based on the Love Babbar DSA Sheet.
 - Problem links point to [LeetCode](https://leetcode.com).
+
+## Author
+
+**Teja B**, full-stack and Flutter developer from Bengaluru, India.
+
+[GitHub](https://github.com/Teja5757897) · [Live demo](https://dsa-solver-by-teja.netlify.app)
+
+If this project helps you, a ⭐ on the repo is appreciated.
 
 ## License
 
