@@ -13,7 +13,7 @@ A full-stack MERN app (MongoDB, Express, React, Node) for working through data s
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-> **Live:** https://dsa-solver-by-teja.netlify.app. The API runs on Render's free tier and sleeps when idle, so the first load after a quiet period can take up to a minute.
+> **Live:** https://dsa-solver-by-teja.netlify.app. 
 
 [Features](#features) · [Screenshots](#screenshots-and-walkthrough) · [How it works](#how-it-works) · [Getting started](#getting-started) · [API](#api-reference) · [Deployment](#deployment)
 
